@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { Route, useRouteMatch } from 'react-router-dom'
 import BigNumber from 'bignumber.js'
 import { useWeb3React } from '@web3-react/core'
-import { Heading, Flex, Image } from '@pancakeswap/uikit'
+import { Heading, Flex, Image } from '@kongswap/uikit'
 import orderBy from 'lodash/orderBy'
 import partition from 'lodash/partition'
 import { useTranslation } from 'contexts/Localization'
@@ -67,17 +67,17 @@ const Pools: React.FC = () => {
         <Flex justifyContent="space-between" flexDirection={['column', null, 'row']}>
           <Flex flexDirection="column" mr={['8px', 0]}>
             <Heading as="h1" scale="xxl" color="secondary" mb="24px">
-              {t('Syrup Pools')}
+              {t('Pools')}
             </Heading>
-            <Heading scale="md" color="text">
+            <Heading scale="md" color="secondary">
               {t('Simply stake tokens to earn.')}
             </Heading>
-            <Heading scale="md" color="text">
+            <Heading scale="md" color="secondary">
               {t('High APR, low risk.')}
             </Heading>
           </Flex>
           <Flex height="fit-content" justifyContent="center" alignItems="center" mt={['24px', null, '0']}>
-            <BountyCard />
+            {/* <BountyCard /> */}
           </Flex>
         </Flex>
       </PageHeader>
@@ -90,7 +90,7 @@ const Pools: React.FC = () => {
         <FlexLayout>
           <Route exact path={`${path}`}>
             <>
-              <CakeVaultCard pool={cakePoolData} showStakedOnly={stakedOnly} />
+              {/* <CakeVaultCard pool={cakePoolData} showStakedOnly={stakedOnly} /> */}
               {stakedOnly
                 ? orderBy(stakedOnlyOpenPools, ['sortOrder'])
                     .slice(0, numberOfPoolsVisible)
@@ -114,7 +114,7 @@ const Pools: React.FC = () => {
         <Image
           mx="auto"
           mt="12px"
-          src="/images/3d-syrup-bunnies.png"
+          src="/images/token-kong.svg"
           alt="Pancake illustration"
           width={192}
           height={184.5}

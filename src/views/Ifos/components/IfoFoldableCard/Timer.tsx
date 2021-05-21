@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'contexts/Localization'
-import { Flex, Link, PocketWatchIcon, Text, Skeleton } from '@pancakeswap/uikit'
+import { Flex, Link, PocketWatchIcon, Text, Skeleton } from '@kongswap/uikit'
 import getTimePeriods from 'utils/getTimePeriods'
 import { PublicIfoData } from 'hooks/ifo/types'
 

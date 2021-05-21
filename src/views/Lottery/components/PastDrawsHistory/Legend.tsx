@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text } from '@pancakeswap/uikit'
+import { Text } from '@kongswap/uikit'
 import { useTranslation } from 'contexts/Localization'
 
 const Wrapper = styled.div`
@@ -18,7 +18,7 @@ const Circle = styled.div<{ isPoolSize?: boolean }>`
   width: 20px;
   height: 20px;
   border-radius: 10px;
-  background-color: ${({ isPoolSize, theme }) => (isPoolSize ? '#7A6EAA' : theme.colors.primary)};
+  background-color: ${({ isPoolSize, theme }) => (isPoolSize ? '#004e80' : theme.colors.primary)};
   margin-right: 6px;
 `
 

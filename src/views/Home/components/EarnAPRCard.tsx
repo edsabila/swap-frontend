@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
-import { Heading, Card, CardBody, Flex, ArrowForwardIcon, Skeleton } from '@pancakeswap/uikit'
+import { Heading, Card, CardBody, Flex, ArrowForwardIcon, Skeleton } from '@kongswap/uikit'
 import max from 'lodash/max'
 import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'contexts/Localization'
@@ -61,7 +61,7 @@ const EarnAPRCard = () => {
           <Heading color="contrast" scale="lg">
             {earnUpTo}
           </Heading>
-          <CardMidContent color="#7645d9">
+          <CardMidContent color="#004e80">
             {highestApr ? `${highestApr}%` : <Skeleton animation="pulse" variant="rect" height="44px" />}
           </CardMidContent>
           <Flex justifyContent="space-between">

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text, BaseLayout } from '@pancakeswap/uikit'
+import { Heading, Text, BaseLayout } from '@kongswap/uikit'
 import { useTranslation } from 'contexts/Localization'
 import Page from 'components/layout/Page'
 import FarmStakingCard from 'views/Home/components/FarmStakingCard'
@@ -13,9 +13,12 @@ import WinCard from 'views/Home/components/WinCard'
 
 const Hero = styled.div`
   align-items: center;
-  background-image: url('/images/pan-bg-mobile.svg');
+  // background-image: url('/images/pan-bg-mobile.svg');
+  // background-position: top center;
+  background-image: url('/images/header-forest-bg.svg');
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center center, center center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -25,8 +28,11 @@ const Hero = styled.div`
   text-align: center;
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    background-image: url('/images/pan-bg2.svg'), url('/images/pan-bg.svg');
-    background-position: left center, right center;
+    // background-image: url('/images/pan-bg2.svg') ,url('/images/pan-bg.svg');
+    // background-position: left center, right center;
+    background-image: url('/images/header-forest-bg.svg');
+    background-position: center center, center center;
+    background-size: cover;
     height: 165px;
     padding-top: 0;
   }
@@ -91,9 +97,9 @@ const Home: React.FC = () => {
     <Page>
       <Hero>
         <Heading as="h1" scale="xl" mb="24px" color="secondary">
-          {t('PancakeSwap')}
+          {t('KongSwap')}
         </Heading>
-        <Text>{t('The #1 AMM and yield farm on Binance Smart Chain.')}</Text>
+        <Text color="secondary">{t('The King of AMM and yield farm on Binance Smart Chain.')}</Text>
       </Hero>
       <div>
         <Cards>

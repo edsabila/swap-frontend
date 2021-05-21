@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Flex, LaurelLeftIcon, LaurelRightIcon } from '@pancakeswap/uikit'
+import { Flex, LaurelLeftIcon, LaurelRightIcon } from '@kongswap/uikit'
 import { RibbonProps } from '../../types'
 import {
   RibbonDownMidExpanding,
@@ -24,7 +24,7 @@ const TextWrapper = styled(Flex)`
   align-items: center;
   position: absolute;
   height: 46px;
-  background-color: #7645d9;
+  background-color: #000;
 `
 
 const LaurelWrapper = styled.div<{ dir?: 'left' | 'right' }>`

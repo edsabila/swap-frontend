@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import BigNumber from 'bignumber.js'
 import styled, { keyframes } from 'styled-components'
-import { Flex, Text, Skeleton } from '@pancakeswap/uikit'
+import { Flex, Text, Skeleton } from '@kongswap/uikit'
 import { Farm } from 'state/types'
 import { provider as ProviderType } from 'web3-core'
 import { useTranslation } from 'contexts/Localization'
@@ -36,10 +36,15 @@ const StyledCardAccent = styled.div`
   animation: ${AccentGradient} 2s linear infinite;
   border-radius: 32px;
   position: absolute;
-  top: -1px;
-  right: -1px;
-  bottom: -3px;
-  left: -1px;
+  // top: -1px;
+  // right: -1px;
+  // bottom: -3px;
+  // left: -1px;
+  // z-index: -1;
+  top: -5px;
+  right: -5px;
+  bottom: -6px;
+  left: -5px;
   z-index: -1;
 `
 
@@ -90,7 +95,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, account }
     : '-'
 
   const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('PANCAKE', '')
-  const earnLabel = farm.dual ? farm.dual.earnLabel : 'CAKE'
+  const earnLabel = farm.dual ? farm.dual.earnLabel : 'KONG'
 
   const farmAPR = farm.apr && farm.apr.toLocaleString('en-US', { maximumFractionDigits: 2 })
 
@@ -100,7 +105,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, account }
   })
   const addLiquidityUrl = `${BASE_ADD_LIQUIDITY_URL}/${liquidityUrlPathParts}`
   const lpAddress = farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]
-  const isPromotedFarm = farm.token.symbol === 'CAKE'
+  const isPromotedFarm = farm.token.symbol === 'KONG'
 
   return (
     <FCard isPromotedFarm={isPromotedFarm}>

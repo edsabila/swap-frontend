@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, useContext, useMemo } from 'react'
 import styled from 'styled-components'
-import { Flex, Text } from '@pancakeswap/uikit'
+import { Flex, Text } from '@kongswap/uikit'
 import PastLotteryDataContext from 'contexts/PastLotteryDataContext'
 import { useTranslation } from 'contexts/Localization'
 import useTheme from 'hooks/useTheme'
@@ -52,13 +52,13 @@ const HistoryChart: React.FC<HistoryChartProps> = ({ showLast }) => {
           label: translate('Pool Size'),
           data: getDataArray('poolSize'),
           yAxisID: 'y-axis-pool',
-          ...lineStyles({ color: '#7A6EAA' }),
+          ...lineStyles({ color: '#004e80' }),
         },
         {
           label: translate('Burned'),
           data: getDataArray('burned'),
           yAxisID: 'y-axis-burned',
-          ...lineStyles({ color: '#1FC7D4' }),
+          ...lineStyles({ color: '#004e80' }),
         },
       ],
     }
@@ -122,13 +122,13 @@ const HistoryChart: React.FC<HistoryChartProps> = ({ showLast }) => {
             type: 'linear',
             position: 'left',
             id: 'y-axis-pool',
-            ...axesStyles({ color: '#7A6EAA', lineHeight: 1.6 }),
+            ...axesStyles({ color: '#004e80', lineHeight: 1.6 }),
           },
           {
             type: 'linear',
             position: 'right',
             id: 'y-axis-burned',
-            ...axesStyles({ color: '#1FC7D4', lineHeight: 1.5 }),
+            ...axesStyles({ color: '#004e80', lineHeight: 1.5 }),
           },
         ],
         xAxes: [

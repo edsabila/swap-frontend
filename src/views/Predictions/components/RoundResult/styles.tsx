@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { DefaultTheme } from 'styled-components'
-import { Box, Flex, FlexProps, Text } from '@pancakeswap/uikit'
+import { Box, Flex, FlexProps, Text } from '@kongswap/uikit'
 import { formatBnb, formatUsd } from 'views/Predictions/helpers'
 import { useTranslation } from 'contexts/Localization'
 import { BetPosition, Round } from 'state/types'
@@ -96,7 +96,7 @@ const getBackgroundColor = ({
   hasEntered,
 }: RoundResultBoxProps & { theme: DefaultTheme }) => {
   if (isNext) {
-    return 'linear-gradient(180deg, #53DEE9 0%, #7645D9 100%)'
+    return 'linear-gradient(180deg, #53DEE9 0%, #000 100%)'
   }
 
   if (hasEntered || isLive) {
